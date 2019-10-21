@@ -74,20 +74,20 @@ public class App {
 				}
 			}
 
-//			for(int i = 1; i <= max ; i++) {
-//				matrix.get(0).add(new ObiectRand("HHNR", "PNR" + i, "FirstName" + i, "LastName" + i, "Birthday" + i));
-//			}
+			for(int i = 1; i <= max ; i++) {
+				matrix.get(0).add(new ObiectRand("HHNR", "PNR" + i, "FirstName" + i, "LastName" + i, "Birthday" + i));
+			}
 
-//			Iterator<ObiectRand> iter = matrix.get(0).iterator();
-//			System.out.print(iter.next().getHhnr() + " ");
-//			for(ObiectRand ob : matrix.get(0)) {
-//				System.out.print(ob.getPnr() + " " + ob.getFirstName() + " " + ob.getLastName() + " \t");
-//			} System.out.println();
-//
-//			for(int i = 1; i < matrix.size(); i++) {
-//				Iterator<ObiectRand> it = matrix.get(i).iterator();
-//				System.out.println(it.next().getHhnr() + " " + matrix.get(i) + "\n");
-//			}
+			Iterator<ObiectRand> iter = matrix.get(0).iterator();
+			System.out.print(iter.next().getHhnr() + " ");
+			for(ObiectRand ob : matrix.get(0)) {
+				System.out.print(ob.getPnr() + " " + ob.getFirstName() + " " + ob.getLastName() + " \t");
+			} System.out.println();
+
+			for(int i = 1; i < matrix.size(); i++) {
+				Iterator<ObiectRand> it = matrix.get(i).iterator();
+				System.out.println(it.next().getHhnr() + " " + matrix.get(i) + "\n");
+			}
 			
 			
 			//Deschidem Workbook:
@@ -135,6 +135,7 @@ public class App {
 			wExportat.write(outPut);
 			outPut.close();
 			wExportat.close();
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 
